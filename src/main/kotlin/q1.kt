@@ -98,7 +98,9 @@ fun main() {
     var sortBySpeed = carList.sortByDescending { it -> it.maxSpeed() }
     println("After sort By Speed")
     println(sortBySpeed)
-
+    var sortByCapacity=carList.sortByDescending { it->it.maxCapacity() }
+    println("After sort By capacity")
+    println(sortByCapacity)
 }
 
 
