@@ -2,7 +2,9 @@ import java.util.*
 import kotlin.math.pow
 
 object ChangeType{
-
+    fun changeToBinary(input: Int): String {
+        return Integer.toBinaryString(input)
+    }
     fun changeToDecimal(input:Long):Int{
         var number=input
         var decimalNumber=0
@@ -26,6 +28,11 @@ fun main(){
         val number=reader.nextLong()
         println("After change:")
         println(ChangeType.changeToDecimal(number))
+    }
+    if (type=="D"){
+        val number=reader.nextInt()
+        println("After change:")
+        println(ChangeType.changeToBinary(number))
     }
 
 }
