@@ -49,3 +49,46 @@ class Main {
         println(managers[indexOfManager].toString())
     }
 }
+fun main() {
+    val main = Main()
+    val listOfEmployee = listOf(
+        Manager("Ali", 52, 104.0),
+        Clerk("Sama", 26, 110.0),
+        Manager("Reza", 42, 120.0),
+        Manager("Farhad", 34, 120.0)
+    )
+    val hours = listOf(140.0, 150.0, 130.0, 180.0)
+    val customer1 = Customer("Sara", 22, Gender.Female)
+    val customer2 = Customer("Maryam", 30, Gender.Female)
+    for (i in listOfEmployee.indices) {
+        println(main.toString(listOfEmployee[i]))
+    }
+    main.totalPayment(listOfEmployee, hours)
+    println("Is customer1 with the same customer2:")
+    println(customer2 == customer1)
+
+    //Using maxBy that I write
+    val listOfManager: MutableList<Manager> = ArrayList()
+    for (employee in listOfEmployee) {
+        if (employee.javaClass.name == "Manager") {
+            listOfManager.add(employee as Manager)
+        }
+    }
+    println(listOfManager.toString())
+//     val maxBy = { managers: MutableList<Manager> ->
+//         var max = 0
+//         var indexOfManager=0
+//         for (manager in managers) {
+//             if (max < manager.age) {
+//                 max = manager.age
+//                 indexOfManager=managers.indexOf(manager)
+//             }
+//         }
+//         println(managers[indexOfManager].toString())
+//     }
+    println("The manager how has maximum age is ")
+    // maxBy(listOfManager)
+    main.maxBy(listOfManager)
+    //kotlin maxBy
+    println(listOfManager.maxByOrNull { it -> it.age })
+}
