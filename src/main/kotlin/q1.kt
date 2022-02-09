@@ -95,12 +95,12 @@ fun main() {
         carList.add(listOfClass[randomIndex])
     }
     println(carList)
-    val sortBySpeed = carList.sortByDescending { it.maxSpeed() }
+    carList.sortByDescending { it.maxSpeed() }
     println("After sort By Speed")
-    println(sortBySpeed)
-    val sortByCapacity=carList.sortByDescending { it.maxCapacity() }
+    println(carList)
+    carList.sortBy { it.maxCapacity() }
     println("After sort By capacity")
-    println(sortByCapacity)
+    println(carList)
 }
 
 
