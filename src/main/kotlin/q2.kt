@@ -13,3 +13,13 @@ class Manager(override val name: String, override val age: Int, override val hou
     }
 
 }
+class Clerk(override val name: String, override val age: Int, override val hourRate: Double) : Employee() {
+    override fun salary(hours: Double): Double {
+        return hourRate * hours / 2
+    }
+}
+
+enum class Gender {
+    Female,
+    Male
+}
