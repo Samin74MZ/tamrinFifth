@@ -94,13 +94,19 @@ fun main() {
         val randomIndex = Random.nextInt(listOfClass.size)
         carList.add(listOfClass[randomIndex])
     }
-    println(carList)
+    for(car in carList){
+        println(car.javaClass.name+"\tSpeed:${car.maxSpeed()}"+"\tCapacity:${car.maxCapacity()}")
+    }
     carList.sortByDescending { it.maxSpeed() }
     println("After sort By Speed")
-    println(carList)
+    for(car in carList){
+        println(car.javaClass.name+"\t${car.maxSpeed()}")
+    }
     carList.sortBy { it.maxCapacity() }
     println("After sort By capacity")
-    println(carList)
+    for(car in carList){
+        println(car.javaClass.name+"\t${car.maxCapacity()}")
+    }
 }
 
 
