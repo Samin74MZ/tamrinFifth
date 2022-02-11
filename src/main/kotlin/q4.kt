@@ -1,5 +1,5 @@
-fun <T>ArrayList<T>.print(items:ArrayList<T>){
-    println(items.toString())
+fun <T>ArrayList<T>.print(){
+    println(this.toString())
 }
 fun main(){
     val arrayList = ArrayList<Int>()
@@ -14,7 +14,7 @@ fun main(){
     arrayList.add(6)
     arrayList.add(3)
     arrayList.add(4)
-    arrayList.print(arrayList)
+    arrayList.print()
     val arrayList1 = ArrayList<Char>()
     arrayList1.add('A')
     arrayList1.add('D')
@@ -25,12 +25,12 @@ fun main(){
     arrayList1.add('G')
     arrayList1.add('M')
     arrayList1.add('x')
-    arrayList1.print(arrayList1)
+    arrayList1.print()
     val arrayList2 = ArrayList<String>()
     arrayList2.add("Samin")
     arrayList2.add("Sara")
     arrayList2.add("Amin")
     arrayList2.add("water")
     arrayList2.add("Baby")
-    arrayList2.print(arrayList2)
+    arrayList2.print()
 }
